@@ -124,8 +124,8 @@ export default Component.extend({
 
   addPreviewImage: function(file) {
     var image = this.$(
-      '<img src="' + file.data + '" class="file-picker__preview__image ' +
-      (this.get('multiple') ? 'multiple' : 'single') + '">');
+      '<p><i class="ti-file"></i>' + file.name + ' - ' + file.size + "</p>"
+    );
 
     this.hideProgress();
     this.$('.file-picker__preview').append(image);
